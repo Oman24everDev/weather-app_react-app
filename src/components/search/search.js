@@ -3,7 +3,7 @@ import { AsyncPaginate } from "react-select-async-paginate";
 // this AsyncPaginate is install using npm i react-select-async-paginate --force
 import { GEO_API_URL, geoApiOptions } from "../../api";
 
-// this onSearchChange is function to pass the event into App.js file
+        // this onSearchChange is function to pass the event into App.js file
 const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
 
@@ -32,17 +32,17 @@ const Search = ({ onSearchChange }) => {
   };
 
   // the searchData here is to retrieve the data that input in AsyncPaginate component
-  const handleOnChange = (searchData) => {
-    setSearch(searchData); // this method is to update the search
-    onSearchChange(searchData); // this is the event/function above to pass the input from handle
-  };
+  const handleOnChange = (searchData) => {  // 2. pass the data on searchData
+    setSearch(searchData);                  // 3. set a new value
+    onSearchChange(searchData);           // this is the event/function above to pass the input from handle
+  };                                        // 4. then call onSearchChange & pass to App.js
 
   return (
     <AsyncPaginate
       placeholder="Search for City"
       debounceTimeout={600}
       value={search}
-      onChange={handleOnChange}
+      onChange={handleOnChange}  // 1. call the handleOnChange
       loadOptions={loadingOpt} // this property w/ method of loadingOpt is for every type on searchbar
       // it will fetch & load the data from API through Async Request
     />
