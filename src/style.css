@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    background: linear-gradient(to right, rgb(17, 122, 192), rgb(162, 219, 252));
+}
+
+.container {
+    max-width: 1080px;
+    margin: 20px auto;
+}
