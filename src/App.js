@@ -1,5 +1,6 @@
 import Search from  "./components/search/search"
 import "./style.css"
+import CurrentWeather from "./components/current-weather/currentWeather";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
             5. from the onSearchChange coming into search.js is passing the value to handleOnSearchChange then console.log to check result */}
       <Search onSearchChange={handleOnSearchChange} />
 
+      <CurrentWeather />
     </div>
   );
 }
