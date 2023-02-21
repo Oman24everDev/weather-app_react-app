@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className="container">
+        {/* this handleOnSearchChange is to get the input from search bar then pass it to onSearchChange */}
       <Search onSearchChange={handleOnSearchChange} />
 
     </div>
