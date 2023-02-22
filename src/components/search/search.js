@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
 // this AsyncPaginate is install using npm i react-select-async-paginate --force
 import { GEO_API_URL, geoApiOptions } from "../../api";
+import "../search/search-style.css"
 
         // this onSearchChange is function to pass the event into App.js file
 const Search = ({ onSearchChange }) => {
@@ -39,6 +40,7 @@ const Search = ({ onSearchChange }) => {
 
   return (
     <AsyncPaginate
+      className="search-bar"
       placeholder="Search for City"
       debounceTimeout={600}
       value={search}
