@@ -44,7 +44,7 @@ const Search = ({ onSearchChange }) => {
       value={search}
       onChange={handleOnChange}  // 1. call the handleOnChange
       loadOptions={loadingOpt} // this property w/ method of loadingOpt is for every type on searchbar
-      // it will fetch & load the data from API through Async Request
+                              // it will fetch & load the data from API through Async Request
     />
   );
 };

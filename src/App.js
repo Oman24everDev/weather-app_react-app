@@ -29,14 +29,26 @@ function App() {
     );
 
     // the passing of variable on array is ordered 1st is current 2nd is forecast
-    Promise.all([currentWeatherFetch, forecastFetch]).then(async (response) => {
+    Promise.all([currentWeatherFetch, forecastFetch])
+    .then(async (response) => {
       // the json is to map on the response & pass to variable, the index 0 is for the 1st result
       const weatherResponse = await response[0].json();
-      const forecastResponse = await response[1].json(); 
-    });
+      const forecastResponse = await response[1].json();
+
+      // this line is from the useState, pass the var into "setState"
+      // & once the response is map to json we can update the state
+      // then extend city: is from the search.js map response GEO API fetch return label: city.name & city.contrycode
+      setCurrentWeather({ city: searchData.label, ...weatherResponse});
+      setForecast({ city: searchData.label, ...forecastResponse});
+    })
+    .catch((err) => console.log(err));
 
     // !!! after fetch & create the Promise, next is the useState hooks
-  };
+  }
+
+  // this console.log is for testing the result if ok or not
+  console.log(currentWeather);
+  console.log(forecast);
 
   return (
     <div className="container">
