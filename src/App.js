@@ -57,11 +57,10 @@ function App() {
             5. from the onSearchChange coming into search.js is passing the value to handleOnSearchChange then console.log to check result */}
       <Search onSearchChange={handleOnSearchChange} />
       
-      {/* the adding of curly brace in component is if the,
-        the data is for passing the data from currentWeather fetch state to display  */}
+      {/* the adding of curly brace in component is if the fetch data if true it will display & if not it's hide */}
+      {/* the currentWeather/forecast params is from the useState with data from Promise.all -> setStates */}
       { currentWeather && <CurrentWeather data={currentWeather}/>}
-
-      <ForecastWeather />
+      { forecast && <ForecastWeather data={forecast} />}
     </div>
   );
 }

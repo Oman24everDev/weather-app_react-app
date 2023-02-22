@@ -1,7 +1,7 @@
 import "../current-weather/currentWeather-style.css";
 
 
-        // create the data parameter to pass the data from fetch to display
+        // the data parameter is to pass the data from fetch states map to display
 const CurrentWeather = ({data}) => {
   return (
     <div className="weather">
