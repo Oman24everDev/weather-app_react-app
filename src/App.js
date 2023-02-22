@@ -1,6 +1,7 @@
 import Search from "./components/search/search";
 import "./style.css";
 import CurrentWeather from "./components/current-weather/currentWeather";
+import ForecastWeather from "./components/forecast-weather/forecastWeather";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./api";
 import { useState } from "react";
 
@@ -59,6 +60,8 @@ function App() {
       {/* the adding of curly brace in component is if the,
         the data is for passing the data from currentWeather fetch state to display  */}
       { currentWeather && <CurrentWeather data={currentWeather}/>}
+
+      <ForecastWeather />
     </div>
   );
 }
