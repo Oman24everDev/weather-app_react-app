@@ -8,8 +8,27 @@ import {
 // import the accordion from npm i react-accessible-accordion
 import "../forecast-weather/forecast-style.css";
 
+// this array is for the label className of 'day'
+const WEEK_DAYS = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday'
+];
+
 // the data parameter is to pass the data from fetch states map to display
 const ForecastWeather = ({ data }) => {
+
+    const dayInAWeek = new Date().getDay();     // gets the day local time
+
+    // this line is for the array of days with current day & concat with the remaining days a week
+    const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, dayInAWeek));
+
+    console.log(forecastDays);
+
   return (
     <>
       <label className="title">Daily</label>
@@ -26,6 +45,7 @@ const ForecastWeather = ({ data }) => {
               <AccordionItemButton>
                 <div className="daily-item">
                   <img alt="weather" className="icon-small" src={`weather-icons/${item.weather[0].icon}.png`}/>
+                  <label className="day"></label>
                 </div>
               </AccordionItemButton>
             </AccordionItemHeading>
