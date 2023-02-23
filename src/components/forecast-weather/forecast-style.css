@@ -6,6 +6,7 @@
 .forecast-bar {
     width: 600px;
     margin: 20px auto;
+    cursor: pointer;
 }
 
 .daily-item {
@@ -28,12 +29,36 @@
     flex: 1 1;
     font-weight: 600;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .forecast-desc {
     flex: 1 1;
+    text-align: left;
+    cursor: pointer;
 }
 
 .min-max {
     color: rgb(107, 106, 106);
+    cursor: pointer;
+}
+
+.daily-details-grid {
+    display: grid;
+    grid-row-gap: 0;
+    grid-column-gap: 15px;
+    row-gap: 0;
+    flex: 1 1;
+    grid-template-columns: auto auto;
+    padding: 5px 15px;
+}
+
+.daily-grid-item {
+    display: flex;
+    height: 35px;
+    justify-content: space-evenly;
+}
+
+.arrow {
+    padding-left: 15px;
 }

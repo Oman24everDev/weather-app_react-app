@@ -48,15 +48,35 @@ const ForecastWeather = ({ data }) => {
                   <img alt="weather" className="icon-small" src={`weather-icons/${item.weather[0].icon}.png`}/>
                   <label className="day">{forecastDays[index]}</label>
                   <label className="forecast-desc">{item.weather[0].description}</label>
-                  <label className="min-max">{Math.round(item.main.temp_min)}°C / {Math.round(item.main.temp_max)}°C</label>
+                  <label className="min-max">{Math.round(item.main.temp_min)}°C / {Math.round(item.main.temp_max)}°C <span className="arrow">▼</span></label>
                 </div>
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <div className="daily-details-grid">
                 <div className="daily-grid-item">
-                  <label>Pressure</label>
-                  <label>{item.main.pressure}</label>
+                  <label>Pressure:</label>
+                  <label>{item.main.pressure}hPa</label>
+                </div>
+                <div className="daily-grid-item">
+                  <label>Humidity:</label>
+                  <label>{item.main.humidity}%</label>
+                </div>
+                <div className="daily-grid-item">
+                  <label>Clouds:</label>
+                  <label>{item.clouds.all}%</label>
+                </div>
+                <div className="daily-grid-item">
+                  <label>Winds Speed:</label>
+                  <label>{item.wind.speed} m/s</label>
+                </div>
+                <div className="daily-grid-item">
+                  <label>Sea level:</label>
+                  <label>{item.main.sea_level}mtr</label>
+                </div>
+                <div className="daily-grid-item">
+                  <label>Feels like:</label>
+                  <label>{Math.round(item.main.feels_like)}°C</label>
                 </div>
               </div>
             </AccordionItemPanel>

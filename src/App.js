@@ -48,8 +48,8 @@ function App() {
   }
 
   // this console.log is for test the fetch data if correct or not
-  console.log(currentWeather);
-  console.log(forecast);
+  // console.log(currentWeather);
+  // console.log(forecast);
 
   return (
     <div className="container">
