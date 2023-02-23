@@ -41,7 +41,7 @@ const ForecastWeather = ({ data }) => {
         {/* the params item is for accessing the data from objects instead of data.sample.sample */}
         {/* the params index is for the key to Accordion to loop */}
         {data.list.splice(0, 7).map((item, index) => (
-          <AccordionItem key={index}>
+          <AccordionItem key={index} className="forecast-bar">
             <AccordionItemHeading>
               <AccordionItemButton>
                 <div className="daily-item">

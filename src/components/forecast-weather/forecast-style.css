@@ -2,3 +2,38 @@
     font-size: 24px;
     font-weight: 700;
 }
+
+.forecast-bar {
+    width: 600px;
+    margin: 20px auto;
+}
+
+.daily-item {
+    font-size: 16px;
+    background-color: rgb(255, 243, 221);
+    border-radius: 15px;
+    height: 40px;
+    margin: 10px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon-small {
+    width: 40px;
+}
+
+.day {
+    flex: 1 1;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.forecast-desc {
+    flex: 1 1;
+}
+
+.min-max {
+    color: rgb(107, 106, 106);
+}
