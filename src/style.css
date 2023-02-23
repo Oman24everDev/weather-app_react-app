@@ -7,3 +7,11 @@ body {
     max-width: 1080px;
     margin: 20px auto;
 }
+
+.weather-title {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 3px;
+}

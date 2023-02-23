@@ -53,6 +53,7 @@ function App() {
 
   return (
     <div className="container">
+      <div className="weather-title">City Weather App</div>
       {/* this handleOnSearchChange is to get the input from search bar then pass it to onSearchChange
             5. from the onSearchChange coming into search.js is passing the value to handleOnSearchChange then console.log to check result */}
       <Search onSearchChange={handleOnSearchChange} />
